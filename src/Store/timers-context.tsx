@@ -1,5 +1,5 @@
 //create contextAPI
-import {type ReactNode, createContext, type FC} from "react";
+import {type ReactNode, createContext, type FC, useContext} from "react";
 
 
 //to share the state and values of this context to other components
@@ -23,6 +23,16 @@ type TimersContextValue = TimerState & {
 
 // this contains functions and values shared accross components
 const TimersContext = createContext<TimersContextValue | null>(null); //createcontext is a built in function
+//create and customize built-in useContext() and export this
+const useTimersContext = () =>{
+    const timerCtx = useContext(TimersContext); //pass in the TimersContext
+    //check if the timersCtx is not null, since we all know that it is not null
+    if(timerCtx === null) {
+        throw new Error('TimersContext should not be null!');
+    }
+    //otherwise
+    return timerCtx;
+}
 
 //create a provider that will manage the context values
 type TimersContextProviderProps = {
@@ -47,3 +57,4 @@ const ctx: TimersContextValue = {
 };
 
 export default TimersContextProvider;
+export {useTimersContext};
