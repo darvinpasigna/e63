@@ -1,5 +1,4 @@
 import { 
-    type FC, 
     type ComponentPropsWithoutRef, 
     type FormEvent, 
     forwardRef,

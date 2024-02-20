@@ -1,4 +1,4 @@
-import { type FC, type ComponentPropsWithoutRef, forwardRef } from "react";
+import { type ComponentPropsWithoutRef, forwardRef } from "react";
 
 // interface InputProps{
 //     label: string;
