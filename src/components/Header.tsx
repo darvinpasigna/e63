@@ -8,7 +8,14 @@ const Header = () => {
     <header>
       <h1>ReactTimer</h1>
 {/* modify the buton make it dynamic, also use . to access the props of timersctx */}
-      <Button>{timersCtx.isRunning ? 'Stop' : 'Start'} Timers</Button>
+      <Button onClick={
+        //toggle button using contextAPI and reducer
+        timersCtx.isRunning ? timersCtx.stopTimers : timersCtx.startTimers
+      }
+      
+      >
+          {timersCtx.isRunning ? 'Stop' : 'Start'} Timers
+        </Button>
     </header>
   );
 }
