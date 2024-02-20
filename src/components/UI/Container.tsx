@@ -1,4 +1,4 @@
-import { type FC, type ElementType, type ReactNode, type ComponentPropsWithoutRef } from "react";
+import { type ElementType, type ReactNode, type ComponentPropsWithoutRef } from "react";
 
 // better polymorphic wrapper
 type ContainerProps<T extends ElementType> ={ // make this as generic type base on element type

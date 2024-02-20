@@ -8,7 +8,8 @@ const Timers = () => {
     <ul>
       {timers.map((timer)=>(
         <li key={timer.name}>
-          <Timer {...timer} /></li>
+          <Timer {...timer}/>
+          </li>
       ))}
       
     </ul>
